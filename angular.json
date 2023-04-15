@@ -8,7 +8,7 @@
     "ng-v16-rc0": {
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:browser-esbuild",
           "configurations": {
             "development": {
               "buildOptimizer": false,
