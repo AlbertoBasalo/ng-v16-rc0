@@ -6,8 +6,13 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   template: `
-    <h1> Hello, {{ title }}!</h1>
+    <header>
+      <strong routerLink="/"> {{ title }}!</strong>
+    </header>
     <router-outlet/>
+    <footer>
+      <a routerLink="/contact">Get in contact</a>
+    </footer>
   `,
 })
 export class AppComponent {
