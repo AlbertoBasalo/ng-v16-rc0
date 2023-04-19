@@ -1,11 +1,12 @@
-import { CommonModule } from '@angular/common';
+import { CurrencyPipe, DatePipe, NgIf, TitleCasePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Activity, EMPTY_ACTIVITY } from 'src/app/models/activity.type';
 
 @Component({
   selector: 'app-activity-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgIf, DatePipe, CurrencyPipe, TitleCasePipe, RouterLink],
   styles: [
     `
       .adult {
@@ -21,10 +22,9 @@ import { Activity, EMPTY_ACTIVITY } from 'src/app/models/activity.type';
   ],
   template: `
     <span>
-      <!-- <a [routerLink]="['/', 'activities', activity.slug]"
+      <a [routerLink]="['/', 'activities', activity.slug]"
         >{{ activity.title }}
-      </a> -->
-      {{ activity.title }}
+      </a>
     </span>
     <span> 📅 {{ activity.date | date : 'dd-MMM-yy' }} </span>
     <span>

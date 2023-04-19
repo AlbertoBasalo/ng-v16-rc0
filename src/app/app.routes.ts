@@ -7,4 +7,9 @@ export const APP_ROUTES: Route[] = [
     path: 'contact',
     loadComponent: () => import('./routes/contact/contact.page'),
   },
+  {
+    path: 'activities/:slug',
+    loadComponent: () =>
+      import('./routes/activities/detail-activity/detail-activity.page'),
+  },
 ];
